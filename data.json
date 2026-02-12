@@ -1,0 +1,260 @@
+{
+  "assignments": [
+    {
+      "id": 1,
+      "title": "โครงงาน",
+      "subject": "โครงงาน",
+      "description": "ครับ",
+      "dueDate": "2026-11-21",
+      "createdAt": "2026-02-11T12:53:07.138Z",
+      "submissions": []
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "เลขที่ 1",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 2,
+      "name": "เลขที่ 2",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 3,
+      "name": "เลขที่ 3",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 4,
+      "name": "เลขที่ 4",
+      "lineToken": "",
+      "userId": "U974e8985ab00fe0c1fd8a27d98f0ff61"
+    },
+    {
+      "id": 5,
+      "name": "เลขที่ 5",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 6,
+      "name": "เลขที่ 6",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 7,
+      "name": "เลขที่ 7",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 8,
+      "name": "เลขที่ 8",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 9,
+      "name": "เลขที่ 9",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 10,
+      "name": "เลขที่ 10",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 11,
+      "name": "เลขที่ 11",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 12,
+      "name": "เลขที่ 12",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 13,
+      "name": "เลขที่ 13",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 14,
+      "name": "เลขที่ 14",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 15,
+      "name": "เลขที่ 15",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 16,
+      "name": "เลขที่ 16",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 17,
+      "name": "เลขที่ 17",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 18,
+      "name": "เลขที่ 18",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 19,
+      "name": "เลขที่ 19",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 20,
+      "name": "เลขที่ 20",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 21,
+      "name": "เลขที่ 21",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 22,
+      "name": "เลขที่ 22",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 23,
+      "name": "เลขที่ 23",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 24,
+      "name": "เลขที่ 24",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 25,
+      "name": "เลขที่ 25",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 26,
+      "name": "เลขที่ 26",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 27,
+      "name": "เลขที่ 27",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 28,
+      "name": "เลขที่ 28",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 29,
+      "name": "เลขที่ 29",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 30,
+      "name": "เลขที่ 30",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 31,
+      "name": "เลขที่ 31",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 32,
+      "name": "เลขที่ 32",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 33,
+      "name": "เลขที่ 33",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 34,
+      "name": "เลขที่ 34",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 35,
+      "name": "เลขที่ 35",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 36,
+      "name": "เลขที่ 36",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 37,
+      "name": "เลขที่ 37",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 38,
+      "name": "เลขที่ 38",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 39,
+      "name": "เลขที่ 39",
+      "lineToken": "",
+      "userId": ""
+    },
+    {
+      "id": 40,
+      "name": "เลขที่ 40",
+      "lineToken": "",
+      "userId": "U053357d58653d9b21857de2bb4031c75"
+    }
+  ],
+  "teacher": {
+    "name": "คุณครู",
+    "lineToken": "",
+    "userId": "U053357d58653d9b21857de2bb4031c75"
+  }
+}

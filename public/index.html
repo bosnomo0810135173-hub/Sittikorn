@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบส่งการบ้าน - Homework Submission System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&family=Krona+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header glass-effect">
+            <div class="header-content">
+                <div>
+                    <h1 class="header-font gradient-text">📚 Homework System</h1>
+                    <p class="subtitle">ระบบส่งการบ้านและแจ้งเตือนผ่าน LINE</p>
+                </div>
+                <div class="role-switcher" style="display: none;">
+                    <button class="role-btn active" id="teacherBtn" onclick="switchRole('teacher')">
+                        👨‍🏫 ครู
+                    </button>
+                    <button class="role-btn" id="studentBtn" onclick="switchRole('student')">
+                        👨‍🎓 นักเรียน
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- LINE Integration Notice -->
+        <div class="line-notice glass-effect">
+            <span class="line-icon">📱</span>
+            <div class="line-info">
+                <div class="line-title">เชื่อมต่อกับ LINE</div>
+                <div class="line-desc">ระบบจะส่งการแจ้งเตือนอัตโนมัติผ่าน LINE Messaging API</div>
+            </div>
+            <span class="status-badge">✓ พร้อมใช้งาน</span>
+        </div>
+
+        <!-- Main Content -->
+        <main id="mainContent">
+            <!-- จะถูกเปลี่ยนโดย JavaScript -->
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content glass-effect fade-in">
+            <h3 id="modalTitle" class="modal-title"></h3>
+            <div id="modalBody"></div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()">ยกเลิก</button>
+                <button class="btn btn-primary" id="modalSubmitBtn"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>กำลังโหลด...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
