@@ -176,7 +176,7 @@ app.post('/webhook', async (req, res) => {
                 console.log(`📝 ข้อความ: ${text}`);
                 
                 const data = readData();
-                const baseUrl = process.env.BASE_URL || `http://localhost:${PORT}`;
+                const baseUrl = process.env.BASE_URL || `https://homework-system-cxkp.onrender.com`;
                 
                 // ตรวจสอบว่าเป็นครู
                 if (text.toLowerCase() === 'ครู' || text.toLowerCase() === 'teacher') {
@@ -292,7 +292,7 @@ app.post('/api/assignments', async (req, res) => {
     writeData(data);
     
     // ส่งการแจ้งเตือนไปยังนักเรียนทุกคนที่มี userId
-    const baseUrl = process.env.BASE_URL || `http://localhost:${PORT}`;
+    const baseUrl = process.env.BASE_URL || `https://homework-system-cxkp.onrender.com`;
     for (const student of data.students) {
         if (student.userId) {
             const studentUrl = `${baseUrl}?role=student&studentId=${student.id}&userId=${student.userId}`;
@@ -302,8 +302,7 @@ app.post('/api/assignments', async (req, res) => {
                 `📚 ${newAssignment.title}\n` +
                 `📖 วิชา: ${newAssignment.subject}\n` +
                 `📝 ${newAssignment.description}\n` +
-                `⏰ กำหนดส่ง: ${new Date(newAssignment.dueDate).toLocaleDateString('th-TH')}\n\n` +
-                `👉 ส่งการบ้าน: ${studentUrl}`
+                `⏰ กำหนดส่ง: ${new Date(newAssignment.dueDate).toLocaleDateString('th-TH')}\n\n`
             );
         }
     }
@@ -362,7 +361,7 @@ app.post('/api/assignments/:id/submit', upload.single('file'), async (req, res) 
     
     // แจ้งเตือนครู
     if (data.teacher.userId) {
-        const baseUrl = process.env.BASE_URL || `http://localhost:${PORT}`;
+        const baseUrl = process.env.BASE_URL || `https://homework-system-cxkp.onrender.com`;
         const teacherUrl = `${baseUrl}?role=teacher&userId=${data.teacher.userId}`;
         await sendLineMessage(
             data.teacher.userId,
@@ -403,7 +402,7 @@ app.post('/api/assignments/:id/grade', async (req, res) => {
     // แจ้งเตือนนักเรียน
     const student = data.students.find(s => s.id === studentId);
     if (student && student.userId) {
-        const baseUrl = process.env.BASE_URL || `http://localhost:${PORT}`;
+        const baseUrl = process.env.BASE_URL || `https://homework-system-cxkp.onrender.com`;
         const studentUrl = `${baseUrl}?role=student&studentId=${student.id}&userId=${student.userId}`;
         await sendLineMessage(
             student.userId,
