@@ -1,0 +1,40 @@
+{
+  // ========================================
+  // VS Code Settings สำหรับ Auto-Commit
+  // ========================================
+  
+  // เปิด Auto Save
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  
+  // Git Settings
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  
+  // Run on Save (ต้องติดตั้ง Extension ก่อน)
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "database\\.json$",
+        "cmd": "git add database.json && git commit -m 'Auto update: database.json' --no-verify"
+      },
+      {
+        "match": "\\.js$",
+        "cmd": "git add ${file} && git commit -m 'Auto update: ${fileBasename}' --no-verify",
+        "isAsync": true
+      }
+    ]
+  },
+  
+  // GitLens Settings (ถ้าติดตั้ง GitLens)
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true
+  },
+  
+  // Format on Save
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}
