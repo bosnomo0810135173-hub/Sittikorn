@@ -16,6 +16,7 @@ if not "%status%"=="" (
     for /f "tokens=1-2 delims=/:" %%a in ('time /t') do (set mytime=%%a:%%b)
     
     git commit -m "Auto commit: %mydate% %mytime%"
+    git push --force
     
     echo [32m✅ Commit สำเร็จ![0m
     
