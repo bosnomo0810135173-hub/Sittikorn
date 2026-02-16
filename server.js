@@ -193,23 +193,37 @@ app.post('/webhook', async (req, res) => {
                     console.log(`✅ บันทึก Teacher User ID: ${userId}`);
                 }
                 // ตรวจสอบว่าเป็นนักเรียน (เลขที่ 1-40)
-                else if (text.match(/^เลขที่\s*([1-9]|[1-3][0-9]|40)$/i)) {
-                    const studentNumber = parseInt(text.match(/\d+/)[0]);
-                    
-                    if (studentNumber >= 1 && studentNumber <= 40) {
-                        const student = data.students.find(s => s.id === studentNumber);
-                        if (student) {
-                            student.userId = userId;
-                            writeData(data);
-                            
-                            const studentUrl = `${baseUrl}?role=student&studentId=${student.id}&userId=${userId}`;
-                            
+                else if (text.match(/^เลขที่\s*\d+$/i) || text.match(/^student\s*\d+$/i)) {
+                    // ดึงเลขออกมาจากข้อความ
+                    const numberMatch = text.match(/\d+/);
+                    if (numberMatch) {
+                        const studentNumber = parseInt(numberMatch[0]);
+                        
+                        if (studentNumber >= 1 && studentNumber <= 40) {
+                            const student = data.students.find(s => s.id === studentNumber);
+                            if (student) {
+                                student.userId = userId;
+                                writeData(data);
+                                
+                                const studentUrl = `${baseUrl}?role=student&studentId=${student.id}&userId=${userId}`;
+                                
+                                await replyLineMessage(replyToken, [{
+                                    type: 'text',
+                                    text: `✅ ระบุตัวตนเป็น ${student.name} สำเร็จ\n\n📚 เข้าสู่ระบบ:\n${studentUrl}\n\n💡 คลิกลิงก์เพื่อดูและส่งการบ้าน`
+                                }]);
+                                
+                                console.log(`✅ บันทึก ${student.name} User ID: ${userId}`);
+                            } else {
+                                await replyLineMessage(replyToken, [{
+                                    type: 'text',
+                                    text: `❌ ไม่พบนักเรียนเลขที่ ${studentNumber}\n\nกรุณาระบุเลขที่ 1-40`
+                                }]);
+                            }
+                        } else {
                             await replyLineMessage(replyToken, [{
                                 type: 'text',
-                                text: `✅ ระบุตัวตนเป็น ${student.name} สำเร็จ\n\n📚 เข้าสู่ระบบ:\n${studentUrl}\n\n💡 คลิกลิงก์เพื่อดูและส่งการบ้าน`
+                                text: `❌ เลขที่ไม่ถูกต้อง\n\nกรุณาระบุ "เลขที่ 1" ถึง "เลขที่ 40"`
                             }]);
-                            
-                            console.log(`✅ บันทึก ${student.name} User ID: ${userId}`);
                         }
                     }
                 }
@@ -228,6 +242,7 @@ app.post('/webhook', async (req, res) => {
                         type: 'text',
                         text: `😊 สวัสดีครับ!\n\n` +
                               `กรุณาระบุตัวตนโดยพิมพ์:\n` +
+                              `• "ครู" (สำหรับครู)\n` +
                               `• "เลขที่ 1" ถึง "เลขที่ 40" (สำหรับนักเรียน)\n\n` +
                               `พิมพ์ "help" เพื่อดูคำแนะนำ`
                     }]);
